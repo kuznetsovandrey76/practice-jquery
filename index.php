@@ -3,7 +3,8 @@
 	$user = 'wwagzkrthsjslb';
 	$pass = 'f037a36e6e2452e351f9e88446df480d013dcc943b5de972a461682fb8811dd9';
 	$db   = 'd6u19tp8jutgfb';
-	$connection = pg_connect ('host=$host port=5432 dbname=$db user=$user password=$pass');
+	$connection = pg_connect ('host=$host port=5432 dbname=$db user=$user');
+	// $connection = pg_connect ('host=$host port=5432 dbname=$db user=$user password=$pass');
 	
 	if (!$connection) {
 		die('Не удалось соединиться с базой данных');
