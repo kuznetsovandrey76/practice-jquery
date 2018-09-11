@@ -4,8 +4,9 @@
 	$pass = 'f037a36e6e2452e351f9e88446df480d013dcc943b5de972a461682fb8811dd9';
 	$db   = 'd6u19tp8jutgfb';
 	// $connection = pg_connect ('host=$host port=5432 dbname=$db user=$user');
-	$connection = pg_connect ('host=$host port=5432 dbname=$db user=$user password=$pass  sslmode=require');
-	
+	$connection = pg_connect ('driver=pdo_pgsql host=$host port=5432 dbname=$db user=$user password=$pass  sslmode=require');
+	echo $connection;
+
 	if (!$connection) {
 		die('Не удалось соединиться с базой данных');
 	}
